@@ -1,47 +1,93 @@
-# 🤖 Central de Atendimento & Rastreamento de Pedidos
+# 💬 DialoGPT Conversational Agent
+
+Este repositório contém uma implementação do modelo **DialoGPT** (da Microsoft / Hugging Face) para conversação em linguagem natural. Ele permite interagir com o modelo via terminal ou através de um Jupyter Notebook interativo.
 
 
-<img width="1898" height="936" alt="image" src="https://github.com/user-attachments/assets/32d21117-3120-415b-9d40-38cde8046892" />
+📸 Demonstração / Preview
+
+<img width="1898" height="936" alt="1" src="https://github.com/user-attachments/assets/ccfc61b2-6fe0-4f97-91f5-357345f9b438" />
 
 
-Aplicação web de atendimento automatizado desenvolvida para facilitar a comunicação com clientes e permitir o acompanhamento de pedidos através de um chatbot.
+📁 Estrutura do Repositório
+DialoGPT/
+├── DialoGPT.ipynb   # Notebook com testes e execução interativa
+├── main.py          # Script principal para rodar o chat via terminal
+├── .gitignore       # Arquivos e diretórios ignorados pelo Git
+└── README.md        # Documentação do projeto
 
-## ✨ Funcionalidades
 
-- 🔎 Consulta de status de pedidos
-- 📦 Rastreamento e acompanhamento de pedidos
-- 💬 Atendimento automatizado via chatbot
-- ❓ Respostas para dúvidas gerais
-- 💳 Informações sobre formas de pagamento
-- ⚡ Interface simples, moderna e responsiva
-- 🔗 Integração com API para processamento das solicitações
 
-## 🎯 Objetivo
+📋 Pré-requisitos
+Antes de começar, certifique-se de ter instalado em sua máquina:
 
-Centralizar o atendimento ao cliente em uma única interface, oferecendo respostas rápidas e facilitando o acesso às informações relacionadas aos pedidos.
+Python 3.8+
 
-## 🛠️ Tecnologias
+Gerenciador de pacotes pip
 
-- Chatbot com IA
-- API para comunicação com o sistema
-- Interface web responsiva
-- [Adicione aqui as tecnologias utilizadas no projeto]
+(Opcional, mas recomendado) Placa de vídeo com suporte a CUDA caso queira inferência mais rápida.
 
-## 📸 Interface
 
-A aplicação possui uma interface focada em simplicidade e usabilidade, permitindo que o cliente consulte rapidamente seu pedido ou envie dúvidas diretamente pelo chatbot.
 
-## 🚀 Como executar
+🚀 Instalação e Configuração
+1. Clonar o Repositório
+git clone [https://github.com/SEU-USUARIO/DialoGPT.git](https://github.com/SEU-USUARIO/DialoGPT.git)
+cd DialoGPT
 
-```bash
-# Clone o repositório
-git clone <URL_DO_REPOSITORIO>
 
-# Acesse a pasta
-cd <NOME_DO_PROJETO>
+2. Criar e Ativar um Ambiente Virtual
+Recomenda-se o uso de um ambiente virtual para isolar as dependências:
 
-# Instale as dependências
-# ...
+Linux / macOS:
 
-# Execute o projeto
-# ...
+Bash
+python3 -m venv venv
+source venv/bin/activate
+Windows:
+
+Bash
+python -m venv venv
+venv\Scripts\activate
+
+
+3. Instalar as Dependências
+Instale as principais bibliotecas necessárias:
+
+Bash
+pip install torch transformers jupyter
+Dica para GPU: Se você possui placa de vídeo NVIDIA e deseja acelerar o processamento, instale o PyTorch compatível com sua versão de CUDA seguindo as instruções em pytorch.org.
+
+💻 Como Rodar
+Opção 1: Execução via Terminal (main.py)
+Para iniciar o chatbot interativo diretamente pelo console:
+
+Bash
+python main.py
+Digite sua mensagem no prompt e pressione Enter para receber a resposta do modelo.
+
+Para sair, basta pressionar Ctrl + C ou digitar palavras de encerramento (como sair ou exit).
+
+Opção 2: Execução via Jupyter Notebook (DialoGPT.ipynb)
+Caso prefira visualizar os testes e execuções passo a passo:
+
+Inicie o servidor do Jupyter:
+
+Bash
+jupyter notebook
+No navegador que abrir automaticamente, selecione o arquivo DialoGPT.ipynb.
+
+Execute as células sequencialmente (Shift + Enter).
+
+🛠️ Tecnologias Utilizadas
+Python
+
+Hugging Face Transformers
+
+PyTorch
+
+Microsoft DialoGPT
+
+Jupyter Notebook
+
+📄 Licença
+Este projeto é disponibilizado sob a licença MIT (ou a licença de sua preferência).
+
